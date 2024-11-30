@@ -74,3 +74,34 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
+;; Load ox-pandoc for Org mode
+(use-package! ox-pandoc
+  :after org
+  :config
+  ;; Add Pandoc backend to Org mode
+  (add-to-list 'org-export-backends 'pandoc))
+;;
+;;
+;; Configure Pandoc export options for DOCX
+(setq org-pandoc-options-for-docx
+      '((standalone . t)          ;; Create a standalone document
+        (toc . nil)))             ;; Disable table of contents
+;;
+;;
+;; Load org-download
+(use-package! org-download
+  :config
+  ;; Set the directory where images will be stored
+  (setq org-download-image-dir "~/org-images")
+  ;; Set the method for pasting images from the clipboard
+  (setq org-download-screenshot-method "wl-copy -t image/png")
+  ;; Optional: Bind the `yank-media` command to a key combination
+  (map! :after org
+        :map org-mode-map
+        :localleader
+        "v" #'org-download-yank))
+
+;;
+;;
+;;
