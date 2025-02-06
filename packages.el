@@ -51,3 +51,6 @@
 ;;
 (package! org-download :recipe (:host github :repo "abo-abo/org-download"))
 (package! xclip)
+(package! org :pin nil) ;; Use the latest Org version
+;; (package! ob-python)
+(package! obsidian)
