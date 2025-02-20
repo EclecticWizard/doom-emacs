@@ -42,7 +42,6 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Documents/Vault/org/")
 
-
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
@@ -110,3 +109,8 @@
   :config
   (obsidian-specify-path obsidian-directory)
   (global-obsidian-mode t))
+
+(use-package org
+  :ensure t
+  :config
+  (setq org-agenda-files (append org-agenda-files '("~/Documents/Vault/org/agenda.org"))))

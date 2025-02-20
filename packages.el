@@ -54,3 +54,4 @@
 (package! org :pin nil) ;; Use the latest Org version
 ;; (package! ob-python)
 (package! obsidian)
+(package! ox-pandoc)
