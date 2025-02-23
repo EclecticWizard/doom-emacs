@@ -105,10 +105,29 @@
 (use-package! obsidian
   :after org
   :init
-  (setq obsidian-directory "~/Documents/Vault/") ;; Change this!
+  (setq obsidian-directory "~/Documents/Vault/Second Brain") ;; Change this!
   :config
   (obsidian-specify-path obsidian-directory)
-  (global-obsidian-mode t))
+  (global-obsidian-mode t)
+  :custom
+  ;; location of obsidian vault
+  ;; Default location for new notes from `obsidian-capture'
+  (obsidian-inbox-directory "0. Inbox")
+  ;; Useful if you're going to be using wiki links
+  (markdown-enable-wiki-links t)
+
+  ;; These bindings are only suggestions; it's okay to use other bindings
+  :bind (:map obsidian-mode-map
+              ;; Create note
+              ("C-c C-n" . obsidian-capture)
+              ;; If you prefer you can use `obsidian-insert-wikilink'
+              ("C-c C-l" . obsidian-insert-link)
+              ;; Open file pointed to by link at point
+              ("C-c C-o" . obsidian-follow-link-at-point)
+              ;; Open a different note from vault
+              ("C-c C-p" . obsidian-jump)
+              ;; Follow a backlink for the current file
+              ("C-c C-b" . obsidian-backlink-jump)))
 
 (use-package org
   :ensure t
