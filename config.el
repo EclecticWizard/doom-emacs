@@ -126,3 +126,7 @@
 (use-package nerd-icons-dired
   :commands (nerd-icons-dired-mode))
 (setq dired-sidebar-theme 'nerd-icons)
+
+
+;; Keybinds
+(global-set-key (kbd "M-p") 'ace-window)
