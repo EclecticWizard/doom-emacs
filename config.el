@@ -114,3 +114,15 @@
   :ensure t
   :config
   (setq org-agenda-files (append org-agenda-files '("~/Documents/Vault/org/agenda.org"))))
+
+(use-package dired-sidebar
+  :ensure t
+  :commands (dired-sidebar-toggle-sidebar))
+
+(use-package all-the-icons
+  :if (display-graphic-p))
+
+(use-package nerd-icons :defer t)
+(use-package nerd-icons-dired
+  :commands (nerd-icons-dired-mode))
+(setq dired-sidebar-theme 'nerd-icons)

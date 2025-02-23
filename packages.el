@@ -55,3 +55,5 @@
 ;; (package! ob-python)
 (package! obsidian)
 (package! ox-pandoc)
+(package! dired-sidebar)
+(package! all-the-icons)
