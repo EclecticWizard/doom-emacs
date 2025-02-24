@@ -113,8 +113,13 @@
   ;; location of obsidian vault
   ;; Default location for new notes from `obsidian-capture'
   (obsidian-inbox-directory "0. Inbox")
+  ;; Templates
+  (obsidian-templates-directory "4. Archive/Templates")
+  (obsidian-daily-note-template "Daily template.md")
+
   ;; Useful if you're going to be using wiki links
   (markdown-enable-wiki-links t)
+
 
   ;; These bindings are only suggestions; it's okay to use other bindings
   :bind (:map obsidian-mode-map
@@ -128,6 +133,7 @@
               ("C-c C-p" . obsidian-jump)
               ;; Follow a backlink for the current file
               ("C-c C-b" . obsidian-backlink-jump)))
+
 
 (use-package org
   :ensure t
