@@ -75,26 +75,14 @@
 ;; they are implemented.
 ;;
 ;; Load ox-pandoc for Org mode
-(use-package! ox-pandoc
-  :after org
-  :config
-  ;; Add Pandoc backend to Org mode
-  (add-to-list 'org-export-backends 'pandoc))
-;;
-;;
-;; Configure Pandoc export options for DOCX
-(setq org-pandoc-options-for-docx
-      '((standalone . t)          ;; Create a standalone document
-        (toc . nil)))             ;; Disable table of contents
-;;
-;;
+;
 
 ;;
 ;;
 (use-package! obsidian
   :after org
   :init
-  (setq obsidian-directory "~/Documents/Vault/Second Brain") ;; Change this!
+  (setq obsidian-directory "C:\\Users\\jhodgkins\\Documents\\Vault\\") ;; Change this!
   :config
   (obsidian-specify-path obsidian-directory)
   (global-obsidian-mode t)
@@ -127,20 +115,9 @@
 (use-package org
   :ensure t
   :config
-  (setq org-agenda-files (append org-agenda-files '("~/Documents/Vault/org/agenda.org"))))
+  (setq org-agenda-files (append org-agenda-files '("C:\\Users\\jhodgkins\\Documents\\Vault\\0. Inbox"))))
 
 (use-package dired-sidebar
   :ensure t
   :commands (dired-sidebar-toggle-sidebar))
 
-(use-package all-the-icons
-  :if (display-graphic-p))
-
-(use-package nerd-icons :defer t)
-(use-package nerd-icons-dired
-  :commands (nerd-icons-dired-mode))
-(setq dired-sidebar-theme 'nerd-icons)
-
-
-;; Keybinds
-(global-set-key (kbd "M-p") 'ace-window)

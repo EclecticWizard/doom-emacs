@@ -194,3 +194,6 @@
        :config
        ;;literate
        (default +bindings +smartparens))
+
+(use-package vterm
+    :ensure t)
