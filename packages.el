@@ -57,3 +57,4 @@
 (package! ox-pandoc)
 (package! dired-sidebar)
 (package! all-the-icons)
+(package! powershell)
