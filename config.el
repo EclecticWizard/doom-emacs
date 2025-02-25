@@ -88,18 +88,7 @@
         (toc . nil)))             ;; Disable table of contents
 ;;
 ;;
-;; Load org-download
-(use-package! org-download
-  :config
-  ;; Set the directory where images will be stored
-  (setq org-download-image-dir "~/org-images")
-  ;; Set the method for pasting images from the clipboard
-  (setq org-download-screenshot-method "wl-copy -t image/png")
-  ;; Optional: Bind the `yank-media` command to a key combination
-  (map! :after org
-        :map org-mode-map
-        :localleader
-        "v" #'org-download-yank))
+
 ;;
 ;;
 (use-package! obsidian
