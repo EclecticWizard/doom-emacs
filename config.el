@@ -121,3 +121,8 @@
   :ensure t
   :commands (dired-sidebar-toggle-sidebar))
 
+(use-package powershell
+  :ensure t)
+
+;; Keybinds
+(global-set-key (kbd "C-c o t") 'eshell-toggle)
