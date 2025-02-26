@@ -156,6 +156,7 @@
        ;;ocaml             ; an objective camel
        org               ; organize your plain life in plain text
        (org +babel)   ;; Org mode with Babel support
+       (org +roam2)
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional

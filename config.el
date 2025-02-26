@@ -152,6 +152,12 @@
   :commands (nerd-icons-dired-mode))
 (setq dired-sidebar-theme 'nerd-icons)
 
+;; org-roam
+(use-package! org-roam
+  :custom
+  (org-roam-directory "~/Documents/Vault/org/")
+  :config
+  (org-roam-setup))
 
 ;; Keybinds
 (global-set-key (kbd "M-p") 'ace-window)
