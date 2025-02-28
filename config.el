@@ -75,7 +75,26 @@
 ;; they are implemented.
 ;;
 ;; Load ox-pandoc for Org mode
-;
+;;
+;; Custom Functions
+(defun run-cmdexe ()
+  "Run CMD"
+      (interactive)
+      (let ((shell-file-name "cmd.exe"))
+            (shell "*cmd.exe*")))
+
+(defun run-pwsh7 ()
+  "Run Powershell 7"
+      (interactive)
+      (let ((shell-file-name "pwsh.exe"))
+            (shell "*pwsh.exe*")))
+
+(defun run-powershell ()
+  "Run powershell"
+  (interactive)
+  (async-shell-command "c:/windows/system32/WindowsPowerShell/v1.0/powershell.exe -Command -"
+               nil
+               nil))
 
 ;;
 ;;
