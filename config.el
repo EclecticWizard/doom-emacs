@@ -105,16 +105,17 @@
 (use-package! obsidian
   :after org
   :init
-  (setq obsidian-directory "~/Documents/Vault/Second Brain") ;; Change this!
   :config
-  (obsidian-specify-path obsidian-directory)
+  ;;(obsidian-specify-path obsidian-directory)
   (global-obsidian-mode t)
   :custom
   ;; location of obsidian vault
+  (obsidian-directory "~/Documents/Vault/") ;; Change this!
+
   ;; Default location for new notes from `obsidian-capture'
-  (obsidian-inbox-directory "0. Inbox")
+  (obsidian-inbox-directory "/Second Brain/0. Inbox")
   ;; Templates
-  (obsidian-templates-directory "4. Archive/Templates")
+  (obsidian-templates-directory "/Second Brain/4. Archive/Templates")
   (obsidian-daily-note-template "Daily template.md")
 
   ;; Useful if you're going to be using wiki links
