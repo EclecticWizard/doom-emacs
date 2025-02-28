@@ -82,12 +82,11 @@
 (use-package! obsidian
   :after org
   :init
-  (setq obsidian-directory "C:\\Users\\jhodgkins\\Documents\\Vault\\") ;; Change this!
   :config
-  (obsidian-specify-path obsidian-directory)
   (global-obsidian-mode t)
   :custom
   ;; location of obsidian vault
+   (obsidian-directory "C:/Users/jhodgkins/Documents/Vault/")
   ;; Default location for new notes from `obsidian-capture'
   (obsidian-inbox-directory "0. Inbox")
   ;; Templates
@@ -115,7 +114,7 @@
 (use-package org
   :ensure t
   :config
-  (setq org-agenda-files (append org-agenda-files '("C:\\Users\\jhodgkins\\Documents\\Vault\\0. Inbox"))))
+  (setq org-agenda-files (append org-agenda-files '("C:/Users/jhodgkins/Documents/Vault/0. Inbox"))))
 
 (use-package dired-sidebar
   :ensure t
