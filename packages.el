@@ -58,3 +58,4 @@
 (package! dired-sidebar)
 (package! all-the-icons)
 (package! org-roam)
+(package! elfeed-org)

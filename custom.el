@@ -8,7 +8,7 @@
  '(org-agenda-files
    '("~/Documents/Vault/The Open University Vault/TM357 - CCNA (3-DevNet)/TMAs/TMA02/F7862002_TM357_TMA02.org" "/home/jack/Documents/Vault/Second Brain/0. Inbox/TODO Dads PC.org" "/home/jack/Documents/Vault/org/agenda.org"))
  '(package-selected-packages
-   '(org-roam org-download ox-pandoc obsidian koopa-mode company ox-gfm)))
+   '(elfeed-org org-roam org-download ox-pandoc obsidian koopa-mode company ox-gfm)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
