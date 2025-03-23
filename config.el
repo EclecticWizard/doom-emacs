@@ -174,3 +174,10 @@
 
 ;; Keybinds
 (global-set-key (kbd "M-p") 'ace-window)
+
+
+;; Fixes
+;; Go
+(defun go--is-go-asm ()
+  "Temporary fix for go-asm-mode detection."
+  nil)  ;; Always return nil for now
