@@ -176,6 +176,16 @@
   :config
   (org-roam-setup))
 
+
+(after! org-roam
+  (add-to-list 'org-roam-capture-templates
+               '("p" "Daily Productivity Log"
+                 plain
+                 "%?"
+                 :if-new (file+head "daily/%<%Y-%m-%d>--desk-body-log.org"
+                                    "#+title: Desk + Body Log - %<%Y-%m-%d>\n#+filetags: :desk:body:log:\n\n* Daily Log: %<%Y-%m-%d>\n\n** Mood & Energy\n- Sleep quality: [ ] Excellent  [ ] Decent  [ ] Poor\n- Energy level on waking: [1-10] __\n- Overall mood: [ ] Calm [ ] Focused [ ] Meh [ ] Stressed\n\n** Workspace & Posture\n- Keyboard used: [ ] Split (Sofle) [ ] 60% [ ] Standard\n- Mouse: [ ] Left hand [ ] Right hand [ ] Trackpad\n- Desk tweaks today:\n  - [ ] Wider hand spacing\n  - [ ] Monitor at eye level\n  - [ ] Chair/lumbar support adjusted\n  - [ ] Standing at intervals\n  - [ ] Other: _________________________\n\n** Movement & Mobility\n- Break stretches/mobility done:\n  - [ ] Wrist stretch\n  - [ ] Scapular pushups\n  - [ ] Neck/shoulder rolls\n  - [ ] Squats or floor sit\n  - [ ] Yoga pose: ______________________\n- Time outdoors: __ minutes\n- Training today: [ ] BJJ [ ] Yoga [ ] Walk [ ] Other: _______\n\n** Pomodoros\n| Task              | # of Poms | Notes                             |\n|-------------------+-----------+-----------------------------------|\n|                   |           |                                   |\n|                   |           |                                   |\n\n- Best moment of focus: ___________________________________\n- Energy slump: ___________________________________________\n- What helped most today? _________________________________\n\n** Reflections\n- One win today:\n  → _______________________________________________________\n\n- Something to tweak tomorrow:\n  → _______________________________________________________")
+                 :unnarrowed t)))
+
 ;; Keybinds
 (global-set-key (kbd "M-p") 'ace-window)
 
