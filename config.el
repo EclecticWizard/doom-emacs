@@ -36,7 +36,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-nord)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -195,3 +195,13 @@
 (defun go--is-go-asm ()
   "Temporary fix for go-asm-mode detection."
   nil)  ;; Always return nil for now
+
+;; stop new workspaces
+(setq +workspaces-on-switch-project-behavior nil
+      persp-emacsclient-init-frame-behaviour-override 'existing)
+
+(remove-hook 'server-visit-hook #'+workspaces-switch-to-project-h)
+
+;; Remove transparency in terminal
+(when (not (display-graphic-p))
+  (set-face-background 'default "black"))
